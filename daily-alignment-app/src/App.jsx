@@ -1,18 +1,16 @@
 import { Routes, Route } from "react-router-dom";
 import PageNotFound from "./components/LandingPage/sections/PageNotFound/PageNotFound";
-import Header from "./components/LandingPage/sections/Header";
+import LandingPage from "./components/LandingPage/LandingPage";
 import "./App.css";
 
-function App() {
+export default function App() {
 
   return (
     <>
       <Routes>
-        <Route path="/" element={<Header />} />
+        <Route path="/" element={<LandingPage />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
     </>
   )
 }
-
-export default App
