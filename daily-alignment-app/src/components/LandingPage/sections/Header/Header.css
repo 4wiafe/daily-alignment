@@ -50,6 +50,7 @@ nav {
 .get-started button:hover {
   transform: scale(1.1);
 }
+
 .menu {
   width: 25px;
   height: 20px;
@@ -63,6 +64,7 @@ nav {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  position: relative;
 }
 
 .one,
@@ -74,6 +76,27 @@ nav {
   background: var(--text);
 }
 
+.one.active,
+.three.active {
+  position: absolute;
+  top: 50%;
+}
+
+.one.active {
+  transform: rotate(45deg);
+  transition: transform 0.3s ease;
+}
+
+.three.active {
+  transform: rotate(135deg);
+  transition: transform 0.3s ease;
+}
+
+.two.active {
+  visibility: hidden;
+  opacity: 0;
+}
+
 .links-container {
   width: 100%;
   position: absolute;
@@ -81,6 +104,16 @@ nav {
   left: 0;
   padding: 10px;
   z-index: 100;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.links-container.active {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+  animation: drop 0.3s ease forwards;
 }
 
 .nav-links {
@@ -98,4 +131,19 @@ nav {
   text-decoration: none;
   color: var(--text);
   font-size: 1rem;
+}
+
+.link:hover {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+@keyframes drop {
+  from {
+    transform: translateY(0);
+  }
+  
+  to {
+    transform: translateY(3px);
+  }
 }

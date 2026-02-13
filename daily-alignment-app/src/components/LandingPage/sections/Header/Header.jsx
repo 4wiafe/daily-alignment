@@ -5,6 +5,10 @@ import "./Header.css";
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
+  const handleMenu = () => {
+    setIsOpen((prev) => !prev);
+  };
+
   return (
     <header>
       <nav>
@@ -12,7 +16,7 @@ export default function Header() {
           <Link to="/" className="logo">Daily Alignment</Link>
         </div>
 
-        <div className="links-container">
+        <div className={`links-container ${isOpen && "active"}`}>
           <ul className="nav-links">
             <li>
               <a href="#how-it-works" className="link">How It Works</a>
@@ -28,10 +32,10 @@ export default function Header() {
         </div>
 
         <div className="menu">
-          <button type="button">
-            <span className="one"></span>
-            <span className="two"></span>
-            <span className="three"></span>
+          <button type="button" onClick={handleMenu}>
+            <span className={`one ${isOpen && "active"}`}></span>
+            <span className={`two ${isOpen && "active"}`}></span>
+            <span className={`three ${isOpen && "active"}`}></span>
           </button>
         </div>
       </nav>
