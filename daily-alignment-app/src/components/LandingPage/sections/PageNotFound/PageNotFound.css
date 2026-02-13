@@ -1,0 +1,30 @@
+.page-not-found {
+  width: 250px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+  background: var(--surface);
+  border-radius: 10px;
+  border-top: 5px solid var(--error);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  box-shadow: 0px 0px 8px 2px var(--gray-light);
+  -webkit-box-shadow: 0px 0px 8px 2px var(--gray-light);
+  -moz-box-shadow: 0px 0px 8px 2px var(--gray-light);
+}
+
+.page-not-found h1,
+.page-not-found h2 {
+  color: var(--text);
+}
+
+.home-page-link {
+  text-decoration: none;
+  color: blue;
+  border-radius: 10px;
+  font-weight: bold;
+}
