@@ -147,3 +147,35 @@ nav {
     transform: translateY(3px);
   }
 }
+
+@media screen and (min-width: 769px) {
+  .logo {
+    font-size: 1.2rem;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .links-container {
+    width: 220px;
+    position: static;
+    visibility: visible;
+    opacity: 1;
+    padding: 0;
+    pointer-events: auto;
+  }
+
+  .nav-links {
+    flex-direction: row;
+    padding: 10px;
+  }
+
+  .get-started {
+    width: 150px;
+  }
+
+  .get-started button {
+    font-size: 1rem;
+  }
+}
