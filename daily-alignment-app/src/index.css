@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Primary Colors */
+  --primary: #1F3A5F;           
+  --secondary: #4A5D73;        
+  --accent: #2FB8AC;            
+  
+  /* Status Colors */
+  --success: #2FB8AC;          
+  --error: #E5533D;              
+  --warning: #F2B705;           
+  
+  /* Background Colors */
+  --bg: #F5F7FA;                 
+  --surface: #FFFFFF;            
+  
+  /* Text Colors */
+  --text: #1E2933;              
+  --text-light: #4A5D73;     
+  
+  /* Additional Utility Colors */
+  --gray-light: #CBD5E0;         
+  --gray-medium: #94A3B8;       
+}
