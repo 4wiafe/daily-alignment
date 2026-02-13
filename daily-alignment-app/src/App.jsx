@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router";
+import { Routes, Route } from "react-router-dom";
 import PageNotFound from "./components/LandingPage/sections/PageNotFound/PageNotFound";
 import Header from "./components/LandingPage/sections/Header";
 import "./App.css";
