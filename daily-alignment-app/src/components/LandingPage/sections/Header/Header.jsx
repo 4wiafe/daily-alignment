@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import "./Header.css";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,7 +13,7 @@ export default function Header() {
         </div>
 
         <div className="links-container">
-          <ul>
+          <ul className="nav-links">
             <li>
               <a href="#how-it-works" className="link">How It Works</a>
             </li>

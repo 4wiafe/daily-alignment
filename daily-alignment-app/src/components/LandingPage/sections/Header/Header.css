@@ -1,0 +1,101 @@
+header {
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background: var(--bg);
+}
+
+nav {
+  width: 100%;
+  max-width: 1500px;
+  background: var(--surface);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  box-shadow: var(--shadow);
+  border-radius: 5px;
+}
+
+.logo {
+  text-decoration: none;
+  color: var(--text);
+  font-family: "Goodly", "Inter", sans-serif;
+  font-size: 1.1rem;
+}
+
+.get-started {
+  width: 100px;
+}
+
+.get-started button {
+  width: 100%;
+  padding: 8px 10px;
+  border: none;
+  background: var(--accent);
+  color: var(--surface);
+  font-family: inherit;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.get-started button:hover {
+  transform: scale(1.1);
+}
+.menu {
+  width: 25px;
+  height: 20px;
+}
+
+.menu button {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.one,
+.two,
+.three {
+  width: 100%;
+  height: 3px;
+  border-radius: 3px;
+  background: var(--text);
+}
+
+.links-container {
+  width: 100%;
+  position: absolute;
+  top: 75px;
+  left: 0;
+  padding: 10px;
+  z-index: 100;
+}
+
+.nav-links {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 20px;
+  background: var(--surface);
+  border-radius: 5px;
+}
+
+.link {
+  text-decoration: none;
+  color: var(--text);
+  font-size: 1rem;
+}

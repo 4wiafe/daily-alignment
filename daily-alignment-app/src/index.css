@@ -25,7 +25,10 @@
   
   /* Additional Utility Colors */
   --gray-light: #CBD5E0;         
-  --gray-medium: #94A3B8;       
+  --gray-medium: #94A3B8;   
+  
+  /* Shadow */
+  --shadow: box-shadow: 0px 0px 8px 2px var(--gray-light);
 }
 
 @font-face {
