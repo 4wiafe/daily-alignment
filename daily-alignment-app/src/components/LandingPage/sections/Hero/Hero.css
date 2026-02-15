@@ -144,6 +144,10 @@
   gap: 15px;
 }
 
+.tag {
+  display: none;
+}
+
 @media screen and (min-width: 481px) {
   .hero-buttons {
     width: 40%;
@@ -177,15 +181,97 @@
     font-size: 1.1rem;
     width: 600px;
   }
+
+  .dashboard-summary {
+    padding: 20px 60px;
+  }
 }
 
 @media screen and (min-width: 1025px) {
   .hero-container {
     flex-direction: row;
     justify-content: space-evenly;
+    margin-top: 50px;
+    gap: 0;
   }
 
   .hero-two {
-    width: 30%;
+    width: 40%;
+  }
+
+  .hero-heading {
+    font-size: 3rem;
+  }
+
+  .hero-buttons {
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+  }
+
+  .hero-description {
+    width: 500px;
+  }
+
+  .hero-two {
+    position: relative;
+  }
+
+  .dashboard-summary {
+    padding: 20px 40px;
+    width: 100%;
+  }
+
+  .tag {
+    display: block;
+    padding: 10px 5px;
+    border-radius: 5px;
+    font-weight: bold;
+    position: absolute;
+  }
+
+  .tag1 {
+    background: var(--accent);
+    color: var(--surface);
+    top: -20px;
+    right: -30px;
+    animation: hover-up 3s ease infinite;
+  }
+
+  .tag2 {
+    background: var(--warning);
+    color: var(--surface);
+    bottom: -20px;
+    left: -30px;
+    animation: hover-down 3s ease infinite;
+  }
+}
+
+@keyframes hover-up {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(5px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes hover-down {
+  0% {
+    transform: translateY(5px);
+  }
+
+  50% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(5px);
   }
 }

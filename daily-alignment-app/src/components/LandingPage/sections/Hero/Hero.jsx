@@ -21,6 +21,12 @@ export default function Hero() {
         </div>
         <div className="hero-two">
           <div className="dashboard-summary">
+            <div className="tag tag1">
+              <span>14 Day Streak</span>
+            </div>
+            <div className="tag tag2">
+              <span>92% Success</span>
+            </div>
             <h2>Your Success Dashboard</h2>
             <div className="goal-streak">
               <div className="goal">
