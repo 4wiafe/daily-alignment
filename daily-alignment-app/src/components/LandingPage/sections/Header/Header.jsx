@@ -19,16 +19,28 @@ export default function Header() {
         <div className={`links-container ${isOpen && "active"}`}>
           <ul className="nav-links">
             <li>
-              <a href="#how-it-works" className="link">How It Works</a>
+              <a 
+                href="#how-it-works" 
+                className="link" 
+                onClick={handleMenu}
+              >
+                How It Works
+              </a>
             </li>
             <li>
-              <a href="#features" className="link">Features</a>
+              <a 
+                href="#features" 
+                className="link" 
+                onClick={handleMenu}
+              >
+                Features
+              </a>
             </li>
           </ul>
         </div>
 
         <div className="get-started">
-          <button type="button">Get Started</button>
+          <Link to="/dashboard" className="link-button">Get Started</Link>
         </div>
 
         <div className="menu">

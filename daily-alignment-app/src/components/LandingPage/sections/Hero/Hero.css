@@ -1,0 +1,191 @@
+#hero {
+  margin-top: 68px;
+  text-align: center;
+  padding: 10px;
+}
+
+.hero-container {
+  width: 100%;
+  max-width: 1500px;
+  padding-top: 15px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.hero-heading {
+  font-size: 1.95rem;
+  font-family: "Goodly", "Inter", sans-serif;
+  color: var(--text);
+  margin-bottom: 10px;
+}
+
+.highlight {
+  color: var(--accent);
+}
+
+.sub-cta {
+  color: var(--accent);
+  font-weight: 550;
+  padding: 5px;
+  margin: 10px auto;
+  background: var(--accent-light);
+  border: 0.5px solid var(--accent);
+  border-radius: 5px;
+  width: 300px;
+}
+
+.hero-description {
+  margin-bottom: 10px;
+  width: 300px;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 60%;
+  margin: 10px auto;
+}
+
+.start-button,
+.see-button {
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.start-button {
+  background: var(--accent);
+  color: var(--surface);
+  transition: 
+    background 0.3s ease,
+    color 0.3s ease
+  ;
+}
+
+.see-button {
+  border: 1px solid var(--primary);
+  color: var(--primary);
+  transition: 
+    background 0.3s ease,
+    color 0.3s ease
+  ;
+}
+
+.start-button:hover {
+  background: rgba(47, 184, 172, 0.3);
+  color: var(--accent);
+}
+
+.see-button:hover {
+  background: var(--primary);
+  color: var(--surface);
+}
+
+.dashboard-summary {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  background: var(--surface);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 8px 2px var(--gray-light);
+}
+
+.dashboard-summary h2 {
+  color: var(--primary);
+  font-size: 1.2rem;
+}
+
+.goal {
+  background: var(--primary);
+  color: var(--surface);
+  padding: 20px;
+  border-radius: 10px;
+  grid-column: span 3;
+}
+
+.goal h3 {
+  color: var(--accent);
+  font-size: 0.8rem;
+}
+
+.goal p {
+  font-weight: 550;
+  font-size: 1.1rem;
+}
+
+.streak, .aligned {
+  padding: 10px;
+  background: var(--bg);
+  border-radius: 5px;
+  border: 0.5px solid var(--gray-light);
+}
+
+.current {
+  font-weight: 900;
+  color: var(--primary);
+  font-size: 2.2rem;
+}
+
+.current-description {
+  font-size: 0.8rem;
+}
+
+.goal-streak {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+@media screen and (min-width: 481px) {
+  .hero-buttons {
+    width: 40%;
+  }
+
+  .hero-heading {
+    font-size: 3rem;
+  }
+
+  .hero-description {
+    font-size: 1.1rem;
+    width: 420px;
+  }
+}
+
+@media screen and (min-width: 769px) {
+
+  .sub-cta {
+    margin-top: 50px;
+  }
+
+  .hero-buttons {
+    width: 40%;
+  }
+
+  .hero-heading {
+    font-size: 3.5rem;
+  }
+
+  .hero-description {
+    font-size: 1.1rem;
+    width: 600px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .hero-container {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .hero-two {
+    width: 30%;
+  }
+}
