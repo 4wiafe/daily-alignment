@@ -35,8 +35,8 @@ const cardsContent = [
 
 export default function Features() {
   return (
-    <section>
-      <h2 id="features">Powerful Features</h2>
+    <section id="features">
+      <h2 className="features-heading">Powerful Features</h2>
       <h3 className="features-sub-heading">Everything you need to win</h3>
       <p className="features-description">Simple, powerful tools designed to keep you focused and moving forward every single day.</p>
       <div className="cards-container">

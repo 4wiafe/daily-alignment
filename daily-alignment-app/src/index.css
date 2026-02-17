@@ -29,8 +29,7 @@
   --accent-light: rgba(47, 184, 173, 0.2);
   
   /* Shadow */
-  --shadow: box-shadow: 0px 0px 8px 2px var(--gray-light);
-  --shadow-med: box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+  --shadow: 0px 0px 8px 2px var(--gray-light);
 }
 
 @font-face {
