@@ -1,6 +1,7 @@
 import Header from "./sections/Header/Header";
 import Hero from "./sections/Hero/Hero";
 import Features from "./sections/Features/Features";
+import HowItWorks from "./sections/HowItWorks/HowItWorks";
 
 export default function LandingPage() {
   return (
@@ -9,6 +10,7 @@ export default function LandingPage() {
       <main>
         <Hero />
         <Features />
+        <HowItWorks />
       </main>
     </>
   );
