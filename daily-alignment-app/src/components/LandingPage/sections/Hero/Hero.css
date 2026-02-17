@@ -203,6 +203,10 @@
     font-size: 3rem;
   }
 
+  .hero-description {
+    margin-bottom: 30px;
+  }
+
   .hero-buttons {
     flex-direction: row;
     justify-content: center;
