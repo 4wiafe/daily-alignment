@@ -28,7 +28,9 @@ export default function HowItWorks() {
         {
           steps.map(step => (
             <div className="step" key={step.id}>
-              <span>{step.id}</span>
+              <div className="num-container">
+                <span className="step-num">{step.id}</span>
+              </div>
               <h3 className="step-title">{step.title}</h3>
               <p className="step-description">{step.description}</p>
             </div>
