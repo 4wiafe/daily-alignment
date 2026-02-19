@@ -129,6 +129,7 @@ nav {
   text-decoration: none;
   color: var(--text);
   font-size: 1rem;
+  cursor: pointer;
 }
 
 .link:hover {
