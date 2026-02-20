@@ -15,8 +15,8 @@ export default function Hero() {
             Transform your ambitions into reality with simple daily check-ins. Track alignment, build streaks, and stay focused on what truly matters.
           </p>
           <div className="hero-buttons">
-            <Link className="start-button">Start Your Journey</Link>
-            <Link className="see-button">See How It Works</Link>
+            <Link to="/dashboard" className="start-button">Start Your Journey</Link>
+            <a href="#how-it-works" className="see-button">See How It Works</a>
           </div>
         </div>
         <div className="hero-two">

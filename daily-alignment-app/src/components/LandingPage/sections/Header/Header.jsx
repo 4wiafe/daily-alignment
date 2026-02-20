@@ -40,7 +40,9 @@ export default function Header() {
         </div>
 
         <div className="get-started">
-          <Link to="/dashboard" className="link-button">Get Started</Link>
+          <Link to="/dashboard" className="link-button">
+            Get Started
+          </Link>
         </div>
 
         <div className="menu">
