@@ -1,3 +1,9 @@
+#goal {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
 .dashboard-header {
   width: 100%;
   padding: 0;
@@ -62,4 +68,55 @@
 
 .dashboard-main {
   margin-top: 200px;
+}
+
+.dashboard-main {
+  padding: 20px;
+}
+
+.goal {
+  background: var(--surface);
+  box-shadow: var(--shadow);
+  color: var(--text);
+}
+
+.goal form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  padding: 20px 10px;
+}
+
+.goal-label {
+  font-size: 1.5rem;
+}
+
+.goal-input {
+  padding: 10px;
+  border: 0.5px solid var(--text-light);
+  border-radius: 5px;
+  font-family: inherit;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.goal-input:focus {
+  border: none;
+  outline: 1px solid var(--accent);
+}
+
+.submit {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background: var(--accent);
+  color: var(--surface);
+  font-size: 1.1rem;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.submit:hover {
+  transform: translateY(-3px);
 }

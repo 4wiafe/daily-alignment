@@ -9,7 +9,7 @@ function loadGoal() {
     const saved = localStorage.getItem(KEY);
     const parsed = JSON.parse(saved);
 
-    if (!parsed) return null;
+    if (!parsed) return "";
 
     return parsed;
   } catch (error) {
@@ -18,10 +18,20 @@ function loadGoal() {
 }
 
  export default function Dashboard() {
-  const [goal, setGoal] = useState(loadGoal());
+  const [goal, setGoal] = useState("");
+  const [savedGoal, setSavedGoal] = useState(loadGoal());
 
   const handleGoal = (event) => {
     setGoal(event.target.value);
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    setSavedGoal(goal);
+    setGoal("");
+
+    localStorage.setItem(KEY, JSON.stringify(goal));
   };
 
   return(
@@ -42,10 +52,26 @@ function loadGoal() {
       <main className="dashboard-main">
         <section id="goal" className="goal">
           {
-            goal ? (
-              <p>{goal}</p>
+            savedGoal ? (
+              <p>{savedGoal}</p>
             ) : (
-              <p>Nothing has been saved yet</p>
+              <form onSubmit={handleSubmit}>
+                <label htmlFor="goal" className="goal-label">
+                  Set Your Goal
+                </label>
+                <input 
+                    type="text" 
+                    name="goal" 
+                    id="goal"  
+                    className="goal-input"
+                    value={goal}
+                    onChange={handleGoal}
+                    placeholder="What is your main goal?"
+                    required
+                  />
+                <button 
+                  type="submit" className="submit">Set goal</button>
+              </form>
             )
           }
         </section>
