@@ -123,6 +123,8 @@
 }
 
 .bento {
+  width: 100%;
+  max-width: 1500px;
   padding: 10px;
   margin: 20px auto;
   display: grid;
@@ -137,7 +139,8 @@
 }
 
 .streak,
-.alignment {
+.alignment,
+.recent-checkins {
   text-align: center;
 }
 
@@ -151,4 +154,9 @@
 .alignment span {
   font-size: 0.9rem;
   color: var(--gray-medium);
+}
+
+.recent-checkins h2 {
+  color: var(--text);
+  font-size: 1.3rem;
 }
