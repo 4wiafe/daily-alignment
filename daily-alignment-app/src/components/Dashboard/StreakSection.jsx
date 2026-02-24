@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { calculateStreak } from "../Dashboard/services/checkService";
+import { calculateStreak } from "./services/streakService";
 
 export default function StreakSection() {
   const [streak, setStreak] = useState(0);

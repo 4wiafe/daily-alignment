@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { calculateAlignmentRate } from "../Dashboard/services/checkinService";
+import { calculateAlignmentRate } from "./services/alignmentService";
 
 export default function AlignmentSection() {
   const [alignment, setAlignment] = useState({
@@ -15,7 +15,7 @@ export default function AlignmentSection() {
 
   return (
     <div className="alignment">
-      <h2>{alignment.rate}%</h2>
+      <h2 className="rate">{alignment.rate}%</h2>
       <p>ALIGNMENT RATE</p>
       <span>
         {alignment.yesDays} of {alignment.totalDays} days

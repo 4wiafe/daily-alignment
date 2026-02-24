@@ -125,23 +125,30 @@
 .bento {
   padding: 10px;
   margin: 20px auto;
+  display: grid;
+  gap: 20px;
 }
 
 .bento div {
   box-shadow: var(--shadow);
   background: var(--surface);
+  border-radius: 10px;
+  padding: 20px 40px;
 }
 
-.streak {
+.streak,
+.alignment {
   text-align: center;
 }
 
-.count {
+.count,
+.rate {
   font-size: 3rem;
   color: var(--text);
 }
 
-.streak span {
+.streak span,
+.alignment span {
   font-size: 0.9rem;
   color: var(--gray-medium);
 }
