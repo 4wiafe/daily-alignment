@@ -1,3 +1,5 @@
+import { loadCheckins } from "./checkService";
+
 export function calculateAlignmentRate() {
   const checkins = loadCheckins();
 

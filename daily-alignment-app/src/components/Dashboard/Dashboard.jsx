@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import GoalSection from "./GoalSelection";
 import StreakSection from "./StreakSection";
+import AlignmentSection from "./AlignmentSection";
 import "./Dashboard.css";
 
 export default function Dashboard() {
@@ -30,6 +31,7 @@ export default function Dashboard() {
         <GoalSection />
         <section className="bento">
           <StreakSection />
+          <AlignmentSection />
         </section>
       </main>
     </>
