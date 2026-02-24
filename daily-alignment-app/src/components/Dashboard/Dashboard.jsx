@@ -2,11 +2,11 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Dashboard.css";
 
-const KEY = "goal";
+const GOAL_KEY = "goal";
 
 function loadGoal() {
   try {
-    const saved = localStorage.getItem(KEY);
+    const saved = localStorage.getItem(GOAL_KEY);
     const parsed = JSON.parse(saved);
 
     if (!parsed) return "";
@@ -50,10 +50,11 @@ function loadGoal() {
       </header>
 
       <main className="dashboard-main">
-        <section id="goal" className="goal">
-          {
+        <section id="goal">
+          <div className="goal-form">
+            {
             savedGoal ? (
-              <p>{savedGoal}</p>
+              <p className="set-goal">{savedGoal}</p>
             ) : (
               <form onSubmit={handleSubmit}>
                 <label htmlFor="goal" className="goal-label">
@@ -74,6 +75,7 @@ function loadGoal() {
               </form>
             )
           }
+          </div>
         </section>
       </main>
     </>
