@@ -121,3 +121,27 @@
   color: var(--surface);
   font-size: 1rem;
 }
+
+.bento {
+  padding: 10px;
+  margin: 20px auto;
+}
+
+.bento div {
+  box-shadow: var(--shadow);
+  background: var(--surface);
+}
+
+.streak {
+  text-align: center;
+}
+
+.count {
+  font-size: 3rem;
+  color: var(--text);
+}
+
+.streak span {
+  font-size: 0.9rem;
+  color: var(--gray-medium);
+}
