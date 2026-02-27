@@ -21,7 +21,7 @@ export default function Dashboard() {
             <Link to="/dashboard" className="dashboard-link">
               Dashboard
             </Link>
-            <Link to="/checkIn" className="check-in-link">
+            <Link to="/checkin-form" className="check-in-link">
               Daily Check-In
             </Link>
           </div>
