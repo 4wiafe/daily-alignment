@@ -22,21 +22,17 @@ export default function RecentCheckins() {
           {recent.map((checkin) => (
             <li key={checkin.date} className="checkin-item">
               
-              <div className="checkin-status">
+              <span className="checkin-status">
                 {checkin.completed
-                  ? "I moved toward my goal"
-                  : "I didn't move today"}
-              </div>
+                  ? "I moved towards my goal"
+                  : "I didn't move towards my goal"}
+              </span>
 
               {checkin.reflection && (
                 <p className="checkin-reflection">
                   {checkin.reflection}
                 </p>
               )}
-
-              <span className="checkin-date">
-                {checkin.date}
-              </span>
             </li>
           ))}
         </ul>

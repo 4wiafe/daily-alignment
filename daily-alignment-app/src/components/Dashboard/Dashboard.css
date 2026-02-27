@@ -74,7 +74,7 @@
   padding: 20px;
 }
 
-.set-goal {
+.saved-goal {
   padding: 20px 40px;
   background: var(--primary);
   color: var(--surface);
@@ -163,7 +163,103 @@
 }
 
 .checkin-card {
-  margin-top: 190px;
+  width: 90%;
+  max-width: 800px;
+  margin: 200px auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  background: var(--surface);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.checkin-card h2 {
+  color: var(--text);
+}
+
+.no-goal {
+  background: rgba(255, 191, 0, 0.1);
+  color: #ffbf00;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ffbf00;
+}
+
+.set-goal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  background: var(--surface);
+  box-shadow: none;
+  width: 100%;
+}
+
+.set-goal textarea {
+  font-family: inherit;
+  font-size: 1rem;
+  width: 100%;
+  padding: 10px;
+  color: var(--text);
+}
+
+.set-goal button {
+  padding: 10px 20px;
+  font-family: inherit;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  background: var(--accent);
+  color: var(--surface);
+}
+
+.checkin-list {
+  list-style: none;
+}
+
+.to-dashboard {
+  color: var(--surface);
+  background: var(--accent);
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.stored-goal {
+  font-size: 1.2rem;
+  font-style: italic;
+  color: var(--text);
+}
+
+.checkin-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.checkin-form textarea {
+  padding: 10px;
+  font-family: inherit;
+  color: var(--text);
+  font-size: 1rem;
+  border: 1px solid var(--gray-light);
+  border-radius: 5px;
+}
+
+.submit-checkin {
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-family: inherit;
+  border: none;
+  border-radius: 5px;
+  background: var(--accent);
+  color: var(--surface);
 }
 
 @media screen and (min-width: 580px) {

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { loadGoal, saveGoal } from "../Dashboard/services/goalService";
+import "./Dashboard.css"
 
 export default function GoalSection() {
   const [goal, setGoal] = useState("");
@@ -21,7 +22,7 @@ export default function GoalSection() {
     <section id="goal">
       <div className="goal-form">
         {savedGoal ? (
-          <p className="set-goal">{savedGoal}</p>
+          <p className="saved-goal">{savedGoal}</p>
         ) : (
           <form onSubmit={handleSubmit}>
             <label htmlFor="goal" className="goal-label">

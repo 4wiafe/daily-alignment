@@ -1,31 +1,30 @@
 import { useState, useEffect } from "react";
 import { saveCheckin } from "./services/alignmentService";
 import { Link } from "react-router-dom";
+import "./Dashboard.css"
 
-const GOAL_KEY = "user_goal";
+const GOAL_KEY = "goal";
 
 export default function CheckInForm() {
   const [goal, setGoal] = useState("");
   const [hasGoal, setHasGoal] = useState(false);
   const [reflection, setReflection] = useState("");
   const [aligned, setAligned] = useState(null);
+  const [hasCheckedInToday, setHasCheckedInToday] = useState(false);
 
   useEffect(() => {
     const savedGoal = localStorage.getItem(GOAL_KEY);
+
     if (savedGoal) {
       setGoal(savedGoal);
       setHasGoal(true);
+
+      const todayCheckin = saveCheckin();
+      if (todayCheckin) {
+        setHasCheckedInToday(true);
+      }
     }
   }, []);
-
-  function handleGoalSubmit(e) {
-    e.preventDefault();
-
-    if (!goal.trim()) return;
-
-    localStorage.setItem(GOAL_KEY, goal);
-    setHasGoal(true);
-  }
 
   function handleCheckinSubmit(e) {
     e.preventDefault();
@@ -36,6 +35,42 @@ export default function CheckInForm() {
 
     setReflection("");
     setAligned(null);
+    setHasCheckedInToday(true);
+  }
+
+  if (!hasGoal) {
+    return (
+      <>
+        <header className="dashboard-header">
+          <nav className="dashboard-nav">
+            <div className="dashboard logo-container">
+              <Link to="/dashboard" className="dashboard logo">
+                Daily Alignment
+              </Link>
+              <p>Build momentum, achieve goals</p>
+            </div>
+
+            <div className="dashboard-links">
+              <Link to="/dashboard" className="dashboard-link">
+                Dashboard
+              </Link>
+              <Link to="/checkin-form" className="check-in-link">
+                Daily Check-In
+              </Link>
+            </div>
+          </nav>
+        </header>
+
+        <div className="checkin-card">
+          <h2>Daily Check-In</h2>
+          <p className="no-goal">
+            ⚠️ You haven't set a goal yet. Set one on your dashboard.
+          </p>
+
+          <Link className="to-dashboard" to="/dashboard">Go to Dashboard</Link>
+        </div>
+      </>
+    );
   }
 
   return (
@@ -60,59 +95,53 @@ export default function CheckInForm() {
         </nav>
       </header>
 
-      {!hasGoal ? (
-        <div className="checkin-card">
-          <h2>Daily Check-In</h2>
+      <div className="checkin-card">
+        <h2>Daily Check-In</h2>
 
-          <p>⚠️ You haven't set a goal yet. Set one now.</p>
+        <p className="stored-goal">{goal}</p>
 
-          <form onSubmit={handleGoalSubmit}>
-            <textarea
-              placeholder="What is your main goal right now?"
-              value={goal}
-              onChange={(e) => setGoal(e.target.value)}
-              rows={3}
-            />
-
-            <button type="submit">Submit Goal</button>
-          </form>
-        </div>
-      ) : (
-        <div className="checkin-card">
-          <h2>What did you work on today?</h2>
-
-          <form onSubmit={handleCheckinSubmit}>
+        {hasCheckedInToday ? (
+          <p>You've already checked in today. Come back tomorrow.</p>
+        ) : (
+          <form className="checkin-form" onSubmit={handleCheckinSubmit}>
             <textarea
               placeholder="Write your reflection..."
               value={reflection}
               onChange={(e) => setReflection(e.target.value)}
               rows={4}
+              required
             />
 
             <div className="alignment-buttons">
-              <p>Did this help your goal?</p>
+            <p>Did this help your goal?</p>
 
-              <button
-                type="button"
-                className={aligned === true ? "active" : ""}
-                onClick={() => setAligned(true)}
-              >
-                Yes, aligned
-              </button>
+            <label>
+            <input
+              type="radio"
+              name="alignment"
+              value="yes"
+              checked={aligned === true}
+              onChange={() => setAligned(true)}
+            />
+              Yes, aligned
+            </label><br />
 
-              <button
-                type="button"
-                className={aligned === false ? "active" : ""}
-                onClick={() => setAligned(false)}
-              >
-                No, not aligned
-              </button>
+            <label>
+            <input
+              type="radio"
+              name="alignment"
+              value="no"
+              checked={aligned === false}
+              onChange={() => setAligned(false)}
+            />
+              No, not aligned
+            </label>
             </div>
 
-            <button type="submit">Submit Check-In</button>
+            <button className="submit-checkin" type="submit">Submit Check-In</button>
           </form>
-        </div>
-      )}
+        )}
+      </div>
     </>
   );
 }
